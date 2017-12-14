@@ -1,12 +1,12 @@
 # BeacoNice-android-sdk
 
-#Android SDK 集成指南
+# Android SDK 集成指南
 
-##Step 1 SDK下载  
+## Step 1 SDK下载  
 <http://www.beaconice.cn/>
 
 
-##Step 2 导入SDK  
+## Step 2 导入SDK  
 
 将 jar 包复制到工程的 libs 目录下面，  
 ![导入](Capture.PNG)  
@@ -18,7 +18,7 @@
         compile 'com.google.code.gson:gson:2.6.2'
     }
 
-##Step 3 添加用户权限配置    
+## Step 3 添加用户权限配置    
 
 需要用户允许打开蓝牙与网络的相关权限，在工程 AndroidManifest.xml 文件中添加如下权限
 
@@ -28,7 +28,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-##Step 4 使用  
+## Step 4 使用  
 
     //初始化Blescan对象，并打开蓝牙
     BleScan.init(MainActivity.this);
