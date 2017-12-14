@@ -10,7 +10,7 @@
 
 将 jar 包复制到工程的 libs 目录下面，  
 
-<p align="left">
+<p>
   <img src="https://github.com/LZAndroid/BeacoNice-android-sdk/tree/master/image/Capture.PNG">
 </p>
 
