@@ -16,7 +16,7 @@
 # Android SDK 集成指南
 
 ## Step 1 SDK下载  
-<http://www.beaconice.cn/>
+
 
 
 ## Step 2 导入SDK  
@@ -64,3 +64,6 @@
             }
         }
     });
+
+
+### 官网：<http://www.beaconice.cn/>
