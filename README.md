@@ -44,22 +44,24 @@
 
 ## Step 4 使用  
 
-    //初始化Blescan对象，并打开蓝牙
-    BleScan.init(MainActivity.this);
+    //初始化BleManager对象，并打开蓝牙
+    BleManager.init(MainActivity.this);
     //获取对象
-    bleScan = BleScan.getInstance();
+    BleManager bleManager = BleManager.getInstance();
     //开始扫描
-    bleScan.scanLeDevice(true);
-    //设置扫描回调监听
-    bleScan.setOnBeaconsInfoListener(new BleScan.OnBeaconsInfoListener() {
+    bleManager.scanLeDevice(true);
+    //设置扫描回调监听,返回附近Beacon绑定的相关信息
+    bleManager.setBeaconsInfoCallback(new BleManager.OnBeaconsInfoCallback() {
         @Override
-        public void onBeaconsInfoChange(ArrayList<BeaconInfo> mBeaconArrayInfo) {
-            beaconArrayInfo.clear();
+        public void onScanCallback(ArrayList<BeaconInfo> mBeaconArrayInfo) {
+
             for(BeaconInfo b : mBeaconArrayInfo){
-                Log.d(TAG, b.getCoverage());
-                Log.d(TAG, b.getDistance());
-                Log.d(TAG, b.getMajor());
-                Log.d(TAG, b.getMinor());
+                Log.d(TAG, b.getCoverage());                    //Beacon的覆盖范围   
+                Log.d(TAG, b.getDistance());                    //Beacon与手机的当前距离
+                Log.d(TAG, b.getMajor());                       //Beacon Major
+                Log.d(TAG, b.getMinor());                       //Beacon MInor
+                AudioInfo audioInfo = b.getAudioInfo("zh");     //Beacon绑定的音频信息
+                ...
                 ...
             }
         }
