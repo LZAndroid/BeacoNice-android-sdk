@@ -10,11 +10,11 @@
 
 将 jar 包复制到工程的 libs 目录下面，  
 
-<p>
-  <img src="https://github.com/LZAndroid/BeacoNice-android-sdk/tree/master/image/Capture.PNG">
+<p align="center">
+  <img src="https://github.com/LZAndroid/BeacoNice-android-sdk/blob/master/image/Capture.PNG">
 </p>
 
-![导入](https://github.com/LZAndroid/BeacoNice-android-sdk/tree/master/image/Capture.PNG)  
+![导入](https://github.com/LZAndroid/BeacoNice-android-sdk/blob/master/image/Capture.PNG)  
 由于 jar 包依赖Volley、Gosn，请在build.gradle文件中添加以下依赖：
 
     dependencies {
