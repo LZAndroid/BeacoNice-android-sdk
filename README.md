@@ -48,17 +48,17 @@
     BleManager bleManager = BleManager.getInstance();
     //开始扫描
     bleManager.scanLeDevice(true);
-    //设置扫描回调监听,返回附近Beacon绑定的相关信息
+    //设置扫描回调监听,返回附近Beacon绑定的相关数据
     bleManager.setBeaconsInfoCallback(new BleManager.OnBeaconsInfoCallback() {
         @Override
         public void onScanCallback(ArrayList<BeaconInfo> mBeaconArrayInfo) {
 
             for(BeaconInfo b : mBeaconArrayInfo){
                 Log.d(TAG, b.getCoverage());                    //Beacon的覆盖范围   
-                Log.d(TAG, b.getDistance());                    //Beacon与手机的当前距离
+                Log.d(TAG, b.getDistance());                    //Beacon与手机的实时距离
                 Log.d(TAG, b.getMajor());                       //Beacon Major
-                Log.d(TAG, b.getMinor());                       //Beacon MInor
-                AudioInfo audioInfo = b.getAudioInfo("zh");     //Beacon绑定的音频信息
+                Log.d(TAG, b.getMinor());                       //Beacon Minor
+                AudioInfo audioInfo = b.getAudioInfo("zh");     //Beacon绑定的音频数据
                 ...
                 ...
             }
