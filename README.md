@@ -13,11 +13,18 @@
 
 # BeacoNice-android-sdk
 
-# Android SDK 集成指南
+## 介绍
+BeacoNiceSDK是一套基于Android 4.0及以上版本设备的应用程序接口。 您可以使用该套 SDK开发适用于Android系统移动设备的应用，通过调用SDK接口，您可以轻松实现以下功能：  
+* 扫描附近BeacoNice信标  
+* 获取附近BeacoNice信标绑定的相关数据  
 
-## Step 1 SDK下载  
 
-## Step 2 导入SDK  
+## 集成
+### Step 1 SDK下载  
+
+### Step 1 SDK下载  
+
+### Step 2 导入SDK  
 
 将 jar 包复制到工程的 libs 目录下面，  
 
@@ -30,7 +37,7 @@
         compile 'com.google.code.gson:gson:2.6.2'
     }
 
-## Step 3 添加用户权限配置    
+### Step 3 添加用户权限配置    
 
 需要用户允许打开蓝牙与网络的相关权限，在工程 AndroidManifest.xml 文件中添加如下权限
 
@@ -40,7 +47,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-## Step 4 使用  
+### Step 4 使用  
 
     //初始化BleManager对象，并打开蓝牙
     BleManager.init(MainActivity.this);
